@@ -95,6 +95,9 @@ angular.module('ui.bootstrap.modal', [])
       link: function (scope, element, attrs) {
         scope.windowClass = attrs.windowClass || '';
 
+        element.css('width', 'auto');
+        element.css({ 'left': '50%', 'margin-left': -(element.width() / 2) + 'px' });
+
         // focus a freshly-opened modal
         element[0].focus();
 
